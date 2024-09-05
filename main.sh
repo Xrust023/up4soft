@@ -21,9 +21,9 @@ sudo cp /var/www/html/wordpress/wp-content/pg4wp/db.php /var/www/html/wordpress/
 # Установка нужных файлов
 sudo rm /var/www/html/wordpress/wp-config-sample.php
 sudo cp up4soft/wp-config.php /var/www/html/wordpress
-sudo systemctl stop nginx && sudo rm /etc/nginx/sites-avalable/default && sudo cp up4soft/default /etc/nginx/sites-available/
-sudo mv up4soft/main.html /var/www/html/ && sudo mv /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php
-sudo mv up4soft/fullchain.pem /etc/letsencrypt/live/dimon-up4sost.ddns.net/ && sudo mv up4soft/privkey.pem /etc/letsencrypt/live/dimon-up4sost.ddns.net/ && sudo mv up4soft/options-ssl-nginx.conf /etc/letsencrypt/ && sudo mv up4soft/ssl-dhparams.pem /etc/letsencrypt/
+sudo systemctl stop nginx && sudo rm /etc/nginx/sites-available/default && sudo cp up4soft/default /etc/nginx/sites-available/
+sudo cp up4soft/main.html /var/www/html/
+sudo cp up4soft/fullchain.pem /etc/letsencrypt/live/dimon-up4sost.ddns.net/ && sudo cp up4soft/privkey.pem /etc/letsencrypt/live/dimon-up4sost.ddns.net/ && sudo mv up4soft/options-ssl-nginx.conf /etc/letsencrypt/ && sudo mv up4soft/ssl-dhparams.pem /etc/letsencrypt/
 
 # Права на файлы
 sudo chown -R www-data:www-data /var/www/html/wordpress/
