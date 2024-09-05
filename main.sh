@@ -13,10 +13,10 @@ sudo mv wordpress/* /var/www/html/wordpress
 sudo rm -rf latest.tar.gz
 
 # Установка конфигурации для PostgreSql
-sudo git clone https://github.com/kevinoid/postgresql-for-wordpress.git /var/www/html/wordpress/wp-content/plugins/postgresql-for-wordpress
-sudo mv postgresql-for-wordpress/pg4wp pg4wp
-sudo rm -rf /var/www/html/wordpress/wp-content/plugins/postgresql-for-wordpress
-sudo cp pg4wp/db.php db.php
+sudo git clone https://github.com/kevinoid/postgresql-for-wordpress.git /var/www/html/wordpress/wp-content/postgresql-for-wordpress
+sudo mv /var/www/html/wordpress/wp-content/postgresql-for-wordpress/pg4wp /var/www/html/wordpress/wp-content/pg4wp
+sudo rm -rf /var/www/html/wordpress/wp-content/postgresql-for-wordpress
+sudo cp /var/www/html/wordpress/wp-content/pg4wp/db.php /var/www/html/wordpress/wp-content/db.php
 
 # Установка нужных файлов
 sudo rm /var/www/html/wordpress/wp-config-sample.php
