@@ -46,7 +46,7 @@ server {
 
 }
 server {
-    if ($host = dimon-up4sost.ddns.net) {
+    if ($host = up4soft-test.ddns.net) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
@@ -54,7 +54,7 @@ server {
         listen 80 default_server;
         listen [::]:80 default_server;
 
-        server_name dimon-up4sost.ddns.net;
+        server_name up4soft-test.ddns.net;
     return 404; # managed by Certbot
 
 
